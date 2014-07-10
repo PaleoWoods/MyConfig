@@ -3,4 +3,4 @@ MyFirstProject
 #this is my first GitHub project 
 #just for a test
 
-#following project comes soon!
+#following projects come soon!
