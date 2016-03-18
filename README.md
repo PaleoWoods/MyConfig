@@ -1,6 +1,5 @@
-MyFirstProject
+MyConfig
 ==============
-#this is my first GitHub project 
-#just for a test
+###this is my Daily config 
 
-#following projects come soon!
+###just keep it up to date!
