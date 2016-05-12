@@ -2,7 +2,7 @@
 其中本方案建议安装的六个插件分别是:
 	1.Extended Choice Parameter plugin，
 	2.EnvInject Plugin，
-	3.Build User Vars Plugin，
+	3.user build vars plugin
 	4.Build Name Setter Plugin，
 	5.HTML Publisher Plugin,
 	6.Email-ext plugin
