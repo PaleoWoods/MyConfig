@@ -1,0 +1,42 @@
+#火球STG环境
+alias stg='ssh ops@gate.stg.huoqiu.net';
+# 炒饭线上、STG环境
+alias fun='ssh dev@211.147.90.106'
+# 本地212开发、测试环境
+alias 212='ssh eng@192.168.10.212';
+alias jetty='/Users/sunjian/Documents/jetty9/bin/jetty.sh'
+alias ops='ssh ops@123.56.86.96';
+alias huoqiu='ssh dev@gate.huoqiu.net'
+
+alias hotcold='ssh root@47.88.18.116'
+
+export ANDROID_HOME="/Users/sunjian/Documents/adt-bundle-mac-x86_64-20141013/sdk" 
+export PATH=$PATH:/usr/local/mysql/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/build-tools/android-4.4.2
+export PATH=$PATH:/Users/sunjian/Documents/apache-jmeter-2.13/bin
+
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home"
+
+# ssh 私钥转发
+SSH_ENV="$HOME/.ssh/environment"
+function start_agent {
+	#echo "Initialising new SSH agent..."
+    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+	#echo succeeded
+	chmod 600 "${SSH_ENV}"
+	. "${SSH_ENV}" > /dev/null
+	/usr/bin/ssh-add;
+}
+
+if [ -f "${SSH_ENV}" ] ;then
+	. "${SSH_ENV}" > /dev/null
+	ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null
+	if [ ! "$?" = "0" ]; then
+		start_agent;
+	fi
+else
+	start_agent;
+fi
+
+# rvm 配置
+source ~/.rvm/scripts/rvm
