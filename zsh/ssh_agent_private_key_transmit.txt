@@ -1,0 +1,68 @@
+ 
+修改ssh config, 设置ForwardAgent=yes
+ 
+$ cat ~/.ssh/config
+
+ServerAliveInterval 60
+SendEnv NO
+TCPKeepAlive yes
+ServerAliveInterval=15
+ServerAliveCountMax=6
+Compression=yes
+ForwardAgent=yes
+#GSSAPIAuthentication no
+ControlMaster auto
+ControlPath /tmp/ssh_mux_%h_%p_%r
+Host *
+  StrictHostKeyChecking no
+ 
+查看本机 SHELL
+echo $SHELL
+ 
+修改默认 SHELL
+http://segmentfault.com/a/1190000000606752#articleHeader2
+搜索：设置默认shell
+自动启动ssh-agent
+对bash, 修改~/.bashrc, 添加
+#如果是mac系统，修改添加~/.bash_profile
+SSH_ENV="$HOME/.ssh/environment"
+function start_agent {
+     #echo "Initialising new SSH agent..."
+     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+     #echo succeeded
+     chmod 600 "${SSH_ENV}"
+     . "${SSH_ENV}" > /dev/null
+     /usr/bin/ssh-add;
+}
+if [ -f "${SSH_ENV}" ]; then
+     . "${SSH_ENV}" > /dev/null
+     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+         start_agent;
+     }
+else
+     start_agent;
+fi
+ 
+对zsh, 修改~/.zshrc, 添加
+SSH_ENV="$HOME/.ssh/environment"
+function start_agent {
+     #echo "Initialising new SSH agent..."
+     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+     #echo succeeded
+     chmod 600 "${SSH_ENV}"
+     . "${SSH_ENV}" > /dev/null
+     /usr/bin/ssh-add;
+}
+if [ -f "${SSH_ENV}" ]
+then
+     . "${SSH_ENV}" > /dev/null
+     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null
+     if [ ! "$?" = "0" ]; then
+         start_agent;
+     fi
+else
+     start_agent;
+fi
+ 
+ 
+ 
