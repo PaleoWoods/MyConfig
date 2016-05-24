@@ -1,0 +1,5 @@
+# install sqlacodegen
+pip install sqlacodegen
+
+# gen models
+sqlacodegen --schema tesla mysql+pymysql://readonly:readonly@192.168.10.212:3306 > tesla_models.py
