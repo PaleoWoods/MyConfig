@@ -1,0 +1,7 @@
+1.pipreqs
+    使用 pipreqs — — pipreqs 用于生成 requirements.txt 文件可以根据需要导入的任何项目
+    使用方法：
+    pip install pipreqs $ pipreqs /path/to/project
+    项目地址：https://github.com/bndr/pipreqs
+2.pip freeze > requirements.txt
+    pip的freeze命令保存了保存当前Python环境下所有类库包，其它包括那些你没有在当前项目中使用的类库。
