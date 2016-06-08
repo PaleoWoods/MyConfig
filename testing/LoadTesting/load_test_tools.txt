@@ -1,0 +1,23 @@
+部分性能测试工具
+
+Databene Benerator 数据生成 Databene Benerator
+CLIF http://clif.ow2.org/
+ContiPerf 基于单元的性能框架。
+D-ITG, Distributed Internet Traffic Generator    http://traffic.comics.unina.it/software/ITG/download.php
+https://github.com/linux-test-project/ltp
+Hammerora an open source database load testing and benchmarking tool for Oracle Database, Microsoft SQL Server, IBM DB2, TimesTen, MySQL, MariaDB,  PostgreSQL, Postgres Plus Advanced Server, Greenplum, Redis and Trafodion SQL on Hadoop Learn
+httperf https://github.com/httperf/httperf
+http_load - multiprocessing http test client http://www.acme.com/software/http_load/
+iperf3: A TCP, UDP, and SCTP network bandwidth measurement tool https://github.com/esnet/iperf
+j-hawk is a Java based open source framework which can be incorporated in your application for performance testing. https://sourceforge.net/projects/j-hawk/files/
+loadUI http://www.loadui.org/
+nGrinder https://github.com/naver/ngrinder/
+ostinato an open-source, cross-platform packet/traffic generator and analyzer with a friendly GUI. http://ostinato.org/
+Siege https://www.joedog.org/
+sipp https://github.com/SIPp IPp is a performance testing tool for the SIP protocol.
+Pandora FMS is a flexible and highly scalable monitoring system ready for big environments. https://github.com/pandorafms/pandorafms
+Postal This is a program I wrote to benchmark SMTP servers. https://doc.coker.com.au/projects/postal/
+Tsung n open-source multi-protocol distributed load testing tool http://tsung.erlang-projects.org/
+Web Polygraph Benchmarking tool for caching proxies, origin server accelerators, L4/7 switches, content filters, and other Web intermediaries http://www.web-polygraph.org/downloads/
+http://faban.sunsource.net/
+http://www.grid.unina.it/software/ITG/
