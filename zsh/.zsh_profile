@@ -1,14 +1,3 @@
-#火球STG环境
-alias stg='ssh ops@gate.stg.huoqiu.net';
-# 炒饭线上、STG环境
-alias fun='ssh dev@211.147.90.106'
-# 本地212开发、测试环境
-alias 212='ssh eng@192.168.10.212';
-alias jetty='/Users/sunjian/Documents/jetty9/bin/jetty.sh'
-alias ops='ssh ops@123.56.86.96';
-alias huoqiu='ssh dev@gate.huoqiu.net'
-
-alias hotcold='ssh root@47.88.18.116'
 
 export ANDROID_HOME="/Users/sunjian/Documents/adt-bundle-mac-x86_64-20141013/sdk" 
 export PATH=$PATH:/usr/local/mysql/bin
